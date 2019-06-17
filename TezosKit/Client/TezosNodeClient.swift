@@ -86,6 +86,9 @@ public class TezosNodeClient: AbstractClient {
   /// The default node URL to use.
   public static let defaultNodeURL = URL(string: "https://rpc.tezrpc.me")!
 
+  /// The operation fee policies to apply to all operations.
+  private let operationFeesPolicy: OperationFeesPolicy
+
   /// Initialize a new TezosNodeClient.
   /// - Parameters:
   ///   - remoteNodeURL: The path to the remote node, defaults to the default URL
@@ -94,8 +97,15 @@ public class TezosNodeClient: AbstractClient {
   public init(
     remoteNodeURL: URL = defaultNodeURL,
     urlSession: URLSession = URLSession.shared,
-    callbackQueue: DispatchQueue = DispatchQueue.main
+    callbackQueue: DispatchQueue = DispatchQueue.main,
+    operationFeesPolicy: OperationFeesPolicy = OperationFeesPolicy(
+      feePolicy: .default,
+      gasLimitPolicy: .default,
+      storageLimitPolicy: .default
+    )
   ) {
+    self.operationFeesPolicy = operationFeesPolicy
+
     super.init(
       remoteNodeURL: remoteNodeURL,
       urlSession: urlSession,
@@ -168,9 +178,11 @@ public class TezosNodeClient: AbstractClient {
     from source: String,
     keys: Keys,
     parameters: [String: Any]? = nil,
-    operationFees: OperationFees? = nil,
+    operationFeePolicy: OperationFeesPolicy? = nil,
+//    operationFees: OperationFees? = nil,
     completion: @escaping (Result<String, TezosKitError>) -> Void
   ) {
+    let operationFees = self.operationFees(from: operationFeesPolicy)
     let transactionOperation = TransactionOperation(
       amount: amount,
       source: source,
@@ -748,4 +760,49 @@ public class TezosNodeClient: AbstractClient {
       completion(.failure(TezosKitError(kind: .unknown, underlyingError: "Couldn't fetch metadata")))
     }
   }
+
+  // Can't be nil -- doesn't allow granularity at the fee, storage, gas level
+  private func operationFees(from policy: OperationFeesPolicy?) -> OperationFees {
+    let policy = policy ?? self.operationFeesPolicy
+
+    return OperationFees(
+      fee: fee(from: policy),
+      gasLimit: gasLimit(from: policy),
+      storageLimit: storageLimit(from: policy)
+    )
+  }
+
+  private func fee(from policy: OperationFeesPolicy) -> Tez? {
+    switch(policy.feePolicy) {
+    case .default:
+      return nil
+    }
+  }
+
+  private func gasLimit(from policy: OperationFeesPolicy) -> Tez? {
+    switch(policy.gasLimitPolicy) {
+    case .default:
+      return nil
+    }
+  }
+
+  private func storageLimit(from policy: OperationFeesPolicy) -> Tez? {
+    switch(policy.storageLimitPolicy) {
+    case .default:
+      return nil
+    }
+  }
 }
+
+
+/// Encapsulate Operation Fees to DefaultFees... toss up to AbstractOperatoin?
+/// - Default Fees could never nil itself
+/// - Fees Could still be nil'ed for default
+///
+/// nil is a bad placeholder for "please default these"
+/// --- Break up fees - have everything be a Tez?
+///
+/// - It's also weird that abstract operation provides zero based fees
+/// -- Default Fee resolver?? OperationKind(fee/gas/storage) -> Tez?
+/// -- ok, so, that buys you nilable fees, resolver could take a nil / value and return custom ?? x[operationKind][gas / storage/ fee]
+/// --- nil is still a bad placeholder

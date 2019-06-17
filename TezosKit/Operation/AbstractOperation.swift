@@ -7,6 +7,7 @@ import Foundation
 public class AbstractOperation: Operation {
   public let source: String
   public let kind: OperationKind
+  // TODO: Can I refactor this to a superclass?
   public let operationFees: OperationFees?
 
   public var requiresReveal: Bool {

@@ -115,8 +115,8 @@ class TezosNodeIntegrationTests: XCTestCase {
       keys: Wallet.testWallet.keys
     ) { result in
       switch result {
-      case .failure:
-        XCTFail()
+      case .failure(let error):
+        XCTFail(error.underlyingError!)
       case .success:
         sendExpectation.fulfill()
       }
@@ -128,8 +128,8 @@ class TezosNodeIntegrationTests: XCTestCase {
     let registerBakerExpectation = XCTestExpectation(description: "register baker")
     self.nodeClient.registerDelegate(delegate: baker.address, keys: baker.keys) { result in
       switch result {
-      case .failure:
-        XCTFail()
+      case .failure(let error):
+        XCTFail(error.underlyingError!)
       case .success:
         registerBakerExpectation.fulfill()
       }
@@ -145,8 +145,8 @@ class TezosNodeIntegrationTests: XCTestCase {
       keys: Wallet.testWallet.keys
     ) { result in
       switch result {
-      case .failure:
-        XCTFail()
+      case .failure(let error):
+        XCTFail(error.underlyingError!)
       case .success:
         delegateToBakerExpectation.fulfill()
       }
@@ -158,8 +158,8 @@ class TezosNodeIntegrationTests: XCTestCase {
     let checkDelegateSetToBakerExpectation = XCTestExpectation(description: "delegated to baker")
     self.nodeClient.getDelegate(address: Wallet.originatedAddress) { result in
       switch result {
-      case .failure:
-        XCTFail()
+      case .failure(let error):
+        XCTFail(error.underlyingError!)
       case .success(let delegate):
         XCTAssertEqual(delegate, baker.address)
         checkDelegateSetToBakerExpectation.fulfill()
@@ -192,7 +192,6 @@ class TezosNodeIntegrationTests: XCTestCase {
       }
     }
     wait(for: [checkDelegateClearedAfterDelegationExpectation], timeout: .expectationTimeout)
-
   }
 
   public func testGetAccountBalance() {
