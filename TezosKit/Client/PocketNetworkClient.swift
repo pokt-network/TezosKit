@@ -74,18 +74,19 @@ public class PocketNetworkClient: NetworkClient {
                 self.callbackQueue.async {
                     completion(result)
                 }
-            }) { (error) in
-            let result = self.responseHandler.handleResponse(
-                response: nil,
-                data: nil,
-                error: error,
-                responseAdapterClass: rpc.responseAdapterClass
-            )
-            self.callbackQueue.async {
-                completion(result)
+            },
+            onError: { (error) in
+                let result = self.responseHandler.handleResponse(
+                    response: nil,
+                    data: nil,
+                    error: error,
+                    responseAdapterClass: rpc.responseAdapterClass
+                )
+                self.callbackQueue.async {
+                    completion(result)
+                }
             }
-        }
-        // swiftlint:enable <superfluous_disable_command>
+        )
     }
 
 }

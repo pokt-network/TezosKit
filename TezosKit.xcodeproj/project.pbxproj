@@ -182,7 +182,7 @@
 		77FE788A22EFF92E00B85B9D /* MichelsonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE788922EFF92E00B85B9D /* MichelsonAnnotation.swift */; };
 		77FE788C22EFFA7100B85B9D /* MichelsonAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE788B22EFFA7100B85B9D /* MichelsonAnnotationTests.swift */; };
 		C5239FC022FDBF39002D1B2D /* PocketNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5239FBF22FDBF39002D1B2D /* PocketNetworkClient.swift */; };
-		C5239FC222FDBFDA002D1B2D /* PocketNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5239FC122FDBFDA002D1B2D /* PocketNetworkClientTest.swift */; };
+		C5A21094230CE8C6002BF5CC /* PocketNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A21092230CE579002BF5CC /* PocketNetworkClientTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -418,7 +418,7 @@
 		77FE788B22EFFA7100B85B9D /* MichelsonAnnotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MichelsonAnnotationTests.swift; sourceTree = "<group>"; };
 		C2BFF006F7695B932864C46D /* Pods_TezosKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TezosKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5239FBF22FDBF39002D1B2D /* PocketNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketNetworkClient.swift; sourceTree = "<group>"; };
-		C5239FC122FDBFDA002D1B2D /* PocketNetworkClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketNetworkClientTest.swift; sourceTree = "<group>"; };
+		C5A21092230CE579002BF5CC /* PocketNetworkClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketNetworkClientTest.swift; sourceTree = "<group>"; };
 		F4F69CEC90588DB51FE973FC /* Pods_TezosKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TezosKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -740,7 +740,7 @@
 		77F4D27322221CCE00D34B01 /* TezosKit */ = {
 			isa = PBXGroup;
 			children = (
-				C5239FC122FDBFDA002D1B2D /* PocketNetworkClientTest.swift */,
+				C5A21092230CE579002BF5CC /* PocketNetworkClientTest.swift */,
 				77633D522247EFE20011106A /* TezosNodeClientTests.swift */,
 				77FE788B22EFFA7100B85B9D /* MichelsonAnnotationTests.swift */,
 				77FE788722EEE42500B85B9D /* GetContractStorageRPCTest.swift */,
@@ -979,6 +979,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/TezosCrypto.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Base58Swift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PocketSwift.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -992,6 +993,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TezosCrypto.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Base58Swift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PocketSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1109,7 +1111,6 @@
 				77CE387C21FC7ED8006ADABA /* TezosNodeClient.swift in Sources */,
 				77CE385E21FC7ED8006ADABA /* Wallet.swift in Sources */,
 				77CE384D21FC7ED8006ADABA /* TransactionOperation.swift in Sources */,
-				C5239FC222FDBFDA002D1B2D /* PocketNetworkClientTest.swift in Sources */,
 				77FE788A22EFF92E00B85B9D /* MichelsonAnnotation.swift in Sources */,
 				77CE386621FC7ED8006ADABA /* GetProposalsListRPC.swift in Sources */,
 				7719265A22D92F5E00E63DE4 /* PreapplicationService.swift in Sources */,
@@ -1137,6 +1138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A21094230CE8C6002BF5CC /* PocketNetworkClientTest.swift in Sources */,
 				779427B522BB2B3200559A03 /* ForgingServiceTests.swift in Sources */,
 				77CE36F821F7F49F006ADABA /* StringResponseAdapterTest.swift in Sources */,
 				77CE36FB21F7F49F006ADABA /* MnemonicUtilsTest.swift in Sources */,
@@ -1314,7 +1316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1372,7 +1374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1390,7 +1392,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6F6VXZUKN5;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1420,7 +1422,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6F6VXZUKN5;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1449,7 +1451,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6F6VXZUKN5;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1472,7 +1474,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6F6VXZUKN5;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
