@@ -4,6 +4,13 @@ import Foundation
 import PocketSwift
 
 public class PocketNetworkClient: NetworkClient {
+  public func send<T>(
+    _ rpc: RPC<T>,
+    callbackQueue: DispatchQueue?,
+    completion: @escaping (Result<T, TezosKitError>) -> Void
+  ) {
+  }
+
     /// Network name
     private let network = "TEZOS"
     /// Network ID
@@ -39,8 +46,9 @@ public class PocketNetworkClient: NetworkClient {
         self.responseHandler = responseHandler
         self.pocket = Pocket(devID: devID, network: network, netID: netID, maxNodes: 10, requestTimeOut: 10_000)
     }
+
     public func send<T>(_ rpc: RPC<T>, completion: @escaping (Result<T, TezosKitError>) -> Void) {
-        var httpMethod = Relay.HttpMethod.GET
+    var httpMethod = Relay.HttpMethod.GET
         var data = ""
         // Check if rpc is a POST request
         if rpc.isPOSTRequest {
@@ -61,6 +69,7 @@ public class PocketNetworkClient: NetworkClient {
 //        for header in rpc.headers {
 //            urlRequest.addValue(header.value, forHTTPHeaderField: header.field)
 //        }
+
         pocket.send(
             relay: relay,
             onSuccess: { (response) in

@@ -49,6 +49,8 @@
 		779A9C68230BDA7A004C6575 /* OperationPayloadFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A9C67230BDA7A004C6575 /* OperationPayloadFactory.swift */; };
 		779A9C79230E2C4D004C6575 /* FeeEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A9C78230E2C4A004C6575 /* FeeEstimator.swift */; };
 		779A9C7D230E320C004C6575 /* FeeEstimatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A9C7C230E320B004C6575 /* FeeEstimatorTest.swift */; };
+		779A9C8B23107FCF004C6575 /* PocketSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779A9C8A23107FCF004C6575 /* PocketSwift.framework */; };
+		779A9C8C23108123004C6575 /* PocketNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFC0F1230EB11600D271CE /* PocketNetworkClientTest.swift */; };
 		77B1EADE222496B500EA4FCE /* TezosNodeClient+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1EADD222496B500EA4FCE /* TezosNodeClient+Promises.swift */; };
 		77B1EAED2227342200EA4FCE /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F4D26B221F899800D34B01 /* PromiseKit.framework */; };
 		77B1EAEF222736FC00EA4FCE /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7774780E222228E50010BA4D /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -189,7 +191,6 @@
 		77FE788A22EFF92E00B85B9D /* MichelsonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE788922EFF92E00B85B9D /* MichelsonAnnotation.swift */; };
 		77FE788C22EFFA7100B85B9D /* MichelsonAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE788B22EFFA7100B85B9D /* MichelsonAnnotationTests.swift */; };
 		C5BFC0F0230EB10900D271CE /* PocketNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFC0EF230EB10900D271CE /* PocketNetworkClient.swift */; };
-		C5BFC0F2230EB11600D271CE /* PocketNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFC0F1230EB11600D271CE /* PocketNetworkClientTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +286,8 @@
 		779A9C67230BDA7A004C6575 /* OperationPayloadFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationPayloadFactory.swift; sourceTree = "<group>"; };
 		779A9C78230E2C4A004C6575 /* FeeEstimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeeEstimator.swift; sourceTree = "<group>"; };
 		779A9C7C230E320B004C6575 /* FeeEstimatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeEstimatorTest.swift; sourceTree = "<group>"; };
+		779A9C8823107FB5004C6575 /* TezosCrypto.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = TezosCrypto.framework.dSYM; path = Carthage/Build/iOS/TezosCrypto.framework.dSYM; sourceTree = "<group>"; };
+		779A9C8A23107FCF004C6575 /* PocketSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PocketSwift.framework; path = Carthage/Build/iOS/PocketSwift.framework; sourceTree = "<group>"; };
 		77B1EADD222496B500EA4FCE /* TezosNodeClient+Promises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TezosNodeClient+Promises.swift"; sourceTree = "<group>"; };
 		77B1EAE9222730D600EA4FCE /* TezosNodeIntegrationTests+Promises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TezosNodeIntegrationTests+Promises.swift"; sourceTree = "<group>"; };
 		77B1EAF0222745F600EA4FCE /* RunOperationRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunOperationRPC.swift; sourceTree = "<group>"; };
@@ -450,6 +453,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779A9C8B23107FCF004C6575 /* PocketSwift.framework in Frameworks */,
 				77F4D26C221F899800D34B01 /* PromiseKit.framework in Frameworks */,
 				77F4D2542218866E00D34B01 /* TezosCrypto.framework in Frameworks */,
 				77CE370721FBE67C006ADABA /* Sodium.framework in Frameworks */,
@@ -597,6 +601,8 @@
 		77CE362F21F7EF32006ADABA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				779A9C8A23107FCF004C6575 /* PocketSwift.framework */,
+				779A9C8823107FB5004C6575 /* TezosCrypto.framework.dSYM */,
 				77F4D26B221F899800D34B01 /* PromiseKit.framework */,
 				77F4D2532218866E00D34B01 /* TezosCrypto.framework */,
 				77CE36B721F7F3D6006ADABA /* MnemonicKit.framework */,
@@ -1000,6 +1006,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/TezosCrypto.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Base58Swift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PocketSwift.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -1013,6 +1020,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TezosCrypto.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Base58Swift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PocketSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1034,7 +1042,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --strict\nelse\necho \"warning: SwiftLint not installed, run `brew install swiftlint`\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1075,7 +1084,6 @@
 				779A9C5E23086558004C6575 /* SimulationResultResponseAdapter.swift in Sources */,
 				77CE384A21FC7ED8006ADABA /* RevealOperation.swift in Sources */,
 				77B1EAF52228839000EA4FCE /* OperationPayload.swift in Sources */,
-				C5BFC0F2230EB11600D271CE /* PocketNetworkClientTest.swift in Sources */,
 				77CE386A21FC7ED8006ADABA /* AbstractResponseAdapter.swift in Sources */,
 				77CE387021FC7ED8006ADABA /* GetChainHeadRPC.swift in Sources */,
 				779427B122BB24C800559A03 /* ForgingPolicy.swift in Sources */,
@@ -1163,6 +1171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779A9C8C23108123004C6575 /* PocketNetworkClientTest.swift in Sources */,
 				779427B522BB2B3200559A03 /* ForgingServiceTests.swift in Sources */,
 				77CE36F821F7F49F006ADABA /* StringResponseAdapterTest.swift in Sources */,
 				77CE36FB21F7F49F006ADABA /* MnemonicUtilsTest.swift in Sources */,
