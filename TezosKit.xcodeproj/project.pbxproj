@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0E85B505666E4AD4650B34 /* Pods_TezosKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F69CEC90588DB51FE973FC /* Pods_TezosKitTests.framework */; };
 		7719265422D63FFC00E63DE4 /* OperationMetadataProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719265322D63FFC00E63DE4 /* OperationMetadataProviderTest.swift */; };
 		7719265822D66C7C00E63DE4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719265722D66C7C00E63DE4 /* Address.swift */; };
 		7719265A22D92F5E00E63DE4 /* PreapplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719265922D92F5E00E63DE4 /* PreapplicationService.swift */; };
@@ -190,6 +191,7 @@
 		77FE788822EEE42500B85B9D /* GetContractStorageRPCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE788722EEE42500B85B9D /* GetContractStorageRPCTest.swift */; };
 		77FE788A22EFF92E00B85B9D /* MichelsonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE788922EFF92E00B85B9D /* MichelsonAnnotation.swift */; };
 		77FE788C22EFFA7100B85B9D /* MichelsonAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE788B22EFFA7100B85B9D /* MichelsonAnnotationTests.swift */; };
+		7F139369794ACBAAFA6AB653 /* Pods_TezosKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BFF006F7695B932864C46D /* Pods_TezosKit.framework */; };
 		C5BFC0F0230EB10900D271CE /* PocketNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFC0EF230EB10900D271CE /* PocketNetworkClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -245,6 +247,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		278557DCEB106420D08DC74A /* Pods-TezosKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TezosKit.release.xcconfig"; path = "Target Support Files/Pods-TezosKit/Pods-TezosKit.release.xcconfig"; sourceTree = "<group>"; };
+		7072BE10CD03F04BA2B764CC /* Pods-TezosKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TezosKitTests.release.xcconfig"; path = "Target Support Files/Pods-TezosKitTests/Pods-TezosKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		7719265322D63FFC00E63DE4 /* OperationMetadataProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationMetadataProviderTest.swift; sourceTree = "<group>"; };
 		7719265722D66C7C00E63DE4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		7719265922D92F5E00E63DE4 /* PreapplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreapplicationService.swift; sourceTree = "<group>"; };
@@ -436,6 +440,8 @@
 		C2BFF006F7695B932864C46D /* Pods_TezosKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TezosKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BFC0EF230EB10900D271CE /* PocketNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketNetworkClient.swift; sourceTree = "<group>"; };
 		C5BFC0F1230EB11600D271CE /* PocketNetworkClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketNetworkClientTest.swift; sourceTree = "<group>"; };
+		D244355E5C35903C7680F6C3 /* Pods-TezosKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TezosKit.debug.xcconfig"; path = "Target Support Files/Pods-TezosKit/Pods-TezosKit.debug.xcconfig"; sourceTree = "<group>"; };
+		D2D35AB13B32759AAD903A9B /* Pods-TezosKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TezosKitTests.debug.xcconfig"; path = "Target Support Files/Pods-TezosKitTests/Pods-TezosKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4F69CEC90588DB51FE973FC /* Pods_TezosKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TezosKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -459,6 +465,7 @@
 				77CE370721FBE67C006ADABA /* Sodium.framework in Frameworks */,
 				77CE370821FBE67C006ADABA /* BigInt.framework in Frameworks */,
 				77CE370A21FBE67C006ADABA /* MnemonicKit.framework in Frameworks */,
+				7F139369794ACBAAFA6AB653 /* Pods_TezosKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +475,7 @@
 			files = (
 				7774780C222228590010BA4D /* PromiseKit.framework in Frameworks */,
 				7774780B2222281B0010BA4D /* TezosKit.framework in Frameworks */,
+				4A0E85B505666E4AD4650B34 /* Pods_TezosKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +581,7 @@
 				772F48A62224894E00DF0F9D /* IntegrationTests */,
 				77CE359721F7DC76006ADABA /* Products */,
 				77CE362F21F7EF32006ADABA /* Frameworks */,
+				98A221554551B90A95716490 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -848,6 +857,17 @@
 			path = PromiseKit;
 			sourceTree = "<group>";
 		};
+		98A221554551B90A95716490 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D244355E5C35903C7680F6C3 /* Pods-TezosKit.debug.xcconfig */,
+				278557DCEB106420D08DC74A /* Pods-TezosKit.release.xcconfig */,
+				D2D35AB13B32759AAD903A9B /* Pods-TezosKitTests.debug.xcconfig */,
+				7072BE10CD03F04BA2B764CC /* Pods-TezosKitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -885,6 +905,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77CE35AA21F7DC76006ADABA /* Build configuration list for PBXNativeTarget "TezosKit" */;
 			buildPhases = (
+				D31949EC84CBC27DC9D20123 /* [CP] Check Pods Manifest.lock */,
 				77CE388421FCB8CD006ADABA /* SwiftLint */,
 				77CE359121F7DC76006ADABA /* Headers */,
 				77CE359221F7DC76006ADABA /* Sources */,
@@ -906,10 +927,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77CE35AD21F7DC76006ADABA /* Build configuration list for PBXNativeTarget "TezosKitTests" */;
 			buildPhases = (
+				ABC24A1A910497558EBD2206 /* [CP] Check Pods Manifest.lock */,
 				77CE359B21F7DC76006ADABA /* Sources */,
 				77CE359C21F7DC76006ADABA /* Frameworks */,
 				77CE359D21F7DC76006ADABA /* Resources */,
 				7774780D222228CA0010BA4D /* CopyFiles */,
+				858EC1C6EE53D9A70A1602D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1044,6 +1067,67 @@
 			shellPath = /bin/sh;
 			shellScript = "
 ";
+		};
+		858EC1C6EE53D9A70A1602D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TezosKitTests/Pods-TezosKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TezosKitTests/Pods-TezosKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TezosKitTests/Pods-TezosKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABC24A1A910497558EBD2206 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TezosKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D31949EC84CBC27DC9D20123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TezosKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1423,7 +1507,9 @@
 		};
 		77CE35AB21F7DC76006ADABA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D244355E5C35903C7680F6C3 /* Pods-TezosKit.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1453,7 +1539,9 @@
 		};
 		77CE35AC21F7DC76006ADABA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 278557DCEB106420D08DC74A /* Pods-TezosKit.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1483,8 +1571,9 @@
 		};
 		77CE35AE21F7DC76006ADABA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2D35AB13B32759AAD903A9B /* Pods-TezosKitTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F6VXZUKN5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1506,8 +1595,9 @@
 		};
 		77CE35AF21F7DC76006ADABA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7072BE10CD03F04BA2B764CC /* Pods-TezosKitTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F6VXZUKN5;
 				FRAMEWORK_SEARCH_PATHS = (

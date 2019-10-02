@@ -7,4 +7,10 @@
    <FileRef
       location = "container:TezosKit.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:TezosKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
