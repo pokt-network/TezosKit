@@ -364,6 +364,9 @@
 		C4235B7DC047B5DD73741DE2 /* GetAddressManagerKeyRPCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB03476DB47F37A923ABB15 /* GetAddressManagerKeyRPCTest.swift */; };
 		C454DDB3DECD20CCCCEE02AB /* NetworkClient+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E81E509282B154977477905 /* NetworkClient+Promises.swift */; };
 		C59529A854409FB4806D2369 /* GetChainHeadHashRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA4823FE108BF24AC51A10 /* GetChainHeadHashRPC.swift */; };
+		C596463523F9A10900CC68A4 /* PocketNetworkClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C596463423F9A10900CC68A4 /* PocketNetworkClientTest.swift */; };
+		C596463723F9A1A700CC68A4 /* PocketNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C596463623F9A1A700CC68A4 /* PocketNetworkClient.swift */; };
+		C596463A23F9AB3000CC68A4 /* ci_config.json in Resources */ = {isa = PBXBuildFile; fileRef = C596463923F9AB3000CC68A4 /* ci_config.json */; };
 		C5971B2AD3A770CAC779C482 /* TezosKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CC2EFE37BC672A082A9F69 /* TezosKit.framework */; };
 		C5A5A45C65BF1CFAC428C422 /* RunOperationRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51B27A148DD74109FEB276 /* RunOperationRPC.swift */; };
 		C5EC5863AB162329BCD66123 /* IntegerResponseAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC964601A972639F6CEDDF75 /* IntegerResponseAdapterTest.swift */; };
@@ -772,6 +775,9 @@
 		C1968AE0A3A2B4DAD756FD72 /* ConseilClientIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConseilClientIntegrationTests.swift; sourceTree = "<group>"; };
 		C1FCF6EFDB51394D49E1479C /* PreapplicationServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreapplicationServiceTest.swift; sourceTree = "<group>"; };
 		C525A21D32496E9B7BB4F79A /* GetAddressCounterRPCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAddressCounterRPCTest.swift; sourceTree = "<group>"; };
+		C596463423F9A10900CC68A4 /* PocketNetworkClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketNetworkClientTest.swift; sourceTree = "<group>"; };
+		C596463623F9A1A700CC68A4 /* PocketNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketNetworkClient.swift; sourceTree = "<group>"; };
+		C596463923F9AB3000CC68A4 /* ci_config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ci_config.json; sourceTree = "<group>"; };
 		C714AAB4A35FE0C6B5BEB154 /* GetProposalsListRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProposalsListRPC.swift; sourceTree = "<group>"; };
 		C99F7EF575AEA6BE191F2001 /* TokenContractIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenContractIntegrationTests.swift; sourceTree = "<group>"; };
 		C9A5D9AF5AE200A6C0DBB04B /* EllipticCurveKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurveKeyPair.swift; sourceTree = "<group>"; };
@@ -1013,6 +1019,7 @@
 				5E2DD3668D2DD62AF8EDD738 /* TransactionsResponseAdapterTest.swift */,
 				7D8230197EBFE429B4C99611 /* TransactionTest.swift */,
 				1596A9E29DF24E63C454D2DD /* WalletTests.swift */,
+				C596463423F9A10900CC68A4 /* PocketNetworkClientTest.swift */,
 			);
 			path = TezosKit;
 			sourceTree = "<group>";
@@ -1117,6 +1124,7 @@
 			isa = PBXGroup;
 			children = (
 				E212CD2F0656857B66156D04 /* NetworkClient.swift */,
+				C596463623F9A1A700CC68A4 /* PocketNetworkClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1314,6 +1322,7 @@
 				6B4465D045474BB982821D86 /* FakeObjects.swift */,
 				E4B3BE4BAECB893457A44FC1 /* TestHelpers.swift */,
 				8F1D1F6B1DDF04EB174551D3 /* TestObjects.swift */,
+				C596463923F9AB3000CC68A4 /* ci_config.json */,
 			);
 			name = Common;
 			path = Tests/Common;
@@ -1610,14 +1619,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 719A796CF4303FCE1EA34089 /* Build configuration list for PBXProject "TezosKit" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = 40497E8417609B6A929D29D7;
@@ -1641,6 +1649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF49B2B994C90E6844FC1A6 /* LaunchScreen.storyboard in Resources */,
+				C596463A23F9AB3000CC68A4 /* ci_config.json in Resources */,
 				5B890ECF354B9F86749465BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1698,7 +1707,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "swiftlint autocorrect --config .swiftlint.yml";
+			shellScript = "swiftlint autocorrect --config .swiftlint.yml\n";
 		};
 		D57827DD459651A390BC3CE7 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2174,6 +2183,8 @@
 				650FC94D0C144F4B84340A47 /* BackgroundHighlightedButton.swift in Sources */,
 				6BAC12E4806ADAAA3FC90513 /* SecureEnclaveAppDelegate.swift in Sources */,
 				2A621635D7502E2635CAD72C /* ViewController.swift in Sources */,
+				C596463523F9A10900CC68A4 /* PocketNetworkClientTest.swift in Sources */,
+				C596463723F9A1A700CC68A4 /* PocketNetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2381,7 +2392,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2632,7 +2648,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
